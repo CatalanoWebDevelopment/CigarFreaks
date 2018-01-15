@@ -3,4 +3,4 @@
 require "bundler/setup"
 require "CigarFreaksEnvironment"
 
-
+Cigars.new.call
