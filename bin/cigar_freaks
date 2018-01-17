@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-require_relative './lib/CigarFreaksEnvironment'
-require_relative './lib/Cigars'
+require './lib/CigarFreaksEnvironment'
 
 Cigars.new.call

@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require "CigarFreaksEnvironment"
+require_relative "CigarFreaksEnvironment"
 
-Cigars.new.call
+

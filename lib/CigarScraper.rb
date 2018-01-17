@@ -22,15 +22,15 @@ class CigarScraper
         points
     end
     
-    private
-    
-    scraper = CigarScraper.new
-    names = scraper.get_names
-    points = scraper.get_points
-    
-    (0...names.size).each do |index|
-        puts "- - - - - -".red
-        puts "#{names[index]} | Points: #{points[index]}".blue
+    def run
+        scraper = CigarScraper.new
+        names = scraper.get_names
+        points = scraper.get_points
+
+        (0...names.size).each do |index|
+            puts "- - - - - -".red
+            puts "#{names[index]} | Points: #{points[index]}".blue
+        end
     end
     
 end
