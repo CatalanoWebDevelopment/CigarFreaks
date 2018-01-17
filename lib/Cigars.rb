@@ -11,4 +11,10 @@ class Cigars
     def greeting
         puts "Welcome to CigarFreaks! Here is a list of the top ten most highly valued cigars. If you would like a more in-depth look at one of these beauties, simply type in the number associated with their rank. If you'd like to quit the program, just type in 'exit'. Thanks for using CigarFreaks for your latest deals!".black
     end
+    
+    def options 
+        puts "- - - - - -".red
+        input = gets.strip
+        input = input.downcase
+    end
 end
