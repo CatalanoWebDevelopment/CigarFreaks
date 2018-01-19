@@ -14,20 +14,31 @@ class Cigars
     
     def options 
         puts "- - - - - -".red
+        puts "Which cigar would you like to look at? To quit, type 'exit'"
         input = gets.strip
         input = input.downcase
         
         if input == "1"
 #            puts the code for cigar 1
+            options
         elsif input == "2"
+            options
         elsif input == "3"
+            options
         elsif input == "4"
+            options
         elsif input == "5"
+            options
         elsif input == "6"
+            options
         elsif input == "7"
+            options
         elsif input == "8"
+            options
         elsif input == "9"
+            options
         elsif input == "10"
+            options
         elsif input == "exit"
             goodbye
         else
