@@ -1,6 +1,20 @@
 require_relative 'CigarFreaksEnvironment.rb'
 
 class Cigars
+    attr_accessor :tasting_note, :ring_gauge, :body,
+    :size, :length, :filler, :binder, :wrapper, :price
+    
+    def initialize(tasting_note: nil, ring_guage: nil, body: nil, size: nil, length: nil, filler: nil, binder: nil, wrapper: nil, price: nil)
+        @tasting_note = tasting_note
+        @ring_guage = ring_guage
+        @body = body
+        @size = size
+        @length = length
+        @filler = filler
+        @binder = binder
+        @wrapper = wrapper
+        @price = price
+    end
     
     def call
         greeting
@@ -19,7 +33,7 @@ class Cigars
         input = input.downcase
         
         if input == "1"
-#            puts the code for cigar 1
+            CigarScraper.new.scrape_details("https://www.cigaraficionado.com/ratings/detail/source/sitesearch/note_id/19447")
             options
         elsif input == "2"
             options

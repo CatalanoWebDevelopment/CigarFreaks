@@ -33,4 +33,54 @@ class CigarScraper
         end
     end
     
+    def scrape_details(url)
+        @d = Nokogiri::HTML(open(url))
+        params = {}
+        
+        specs = @d.search("tbody td").map do |info|
+            info.text
+        end
+        
+        params[:tasting_note] = specs[0].strip
+        params[:body] = specs[2].strip
+        params[:size] = specs[4].strip
+        params[:ring_gauge] = specs[6].strip
+        params[:length] = specs[8].strip
+        params[:filler] = specs[10].strip
+        params[:binder] = specs[12].strip
+        params[:wrapper] = specs[12].strip
+        params[:price] = specs[16].strip
+        
+        c = Cigars.new(params)
+        
+        puts "TASTING NOTE:".blue
+        puts "#{c.tasting_note}"
+        
+        puts "- - - - - -".red
+        
+        puts "BODY:".blue
+        puts "#{c.body}"
+        
+        puts "- - - - - -".red
+        
+        puts "SIZE:".blue
+        puts "#{c.size}"
+        
+        puts "- - - - - -".red
+        
+        puts "RING GAUGE:".blue
+        puts "#{c.ring_gauge}"
+        
+        puts "- - - - - -".red
+        
+        puts "LENGTH:".blue
+        puts "#{c.length}"
+        
+        puts "- - - - - -".red
+        
+        puts "FILLER:".blue
+        puts "#{c.filler}"
+
+    end
+    
 end
