@@ -22,6 +22,13 @@ class CigarScraper
         points
     end
     
+    def self.hyperlink
+        prefix = "https://www.cigaraficionado.com"
+        suffix = @doc.search("div.cigar-teaser_wrapper a[href]").attribute("href").value
+        
+        puts "#{prefix}#{suffix}"
+    end
+    
     def run
         scraper = CigarScraper.new
         names = scraper.get_names

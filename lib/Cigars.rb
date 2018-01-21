@@ -33,26 +33,44 @@ class Cigars
         input = input.downcase
         
         if input == "1"
-            CigarScraper.new.scrape_details("https://www.cigaraficionado.com/ratings/detail/source/sitesearch/note_id/19447")
+           CigarScraper.hyperlink CigarScraper.new.scrape_details("https://www.cigaraficionado.com/ratings/detail/source/sitesearch/note_id/19447")
             options
+            
         elsif input == "2"
+            
             options
+            
         elsif input == "3"
+            
             options
+            
         elsif input == "4"
+            
             options
+            
         elsif input == "5"
+            
             options
+            
         elsif input == "6"
+            
             options
+            
         elsif input == "7"
+            
             options
         elsif input == "8"
+            
             options
+            
         elsif input == "9"
+            
             options
+            
         elsif input == "10"
+            
             options
+            
         elsif input == "exit"
             goodbye
         else
