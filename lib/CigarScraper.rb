@@ -48,8 +48,8 @@ class CigarScraper
         params[:length] = specs[8].strip
         params[:filler] = specs[10].strip
         params[:binder] = specs[12].strip
-        params[:wrapper] = specs[12].strip
-        params[:price] = specs[16].strip
+        params[:wrapper] = specs[14].strip
+        params[:price] = specs[18].strip
         
         c = Cigars.new(params)
         
@@ -80,7 +80,24 @@ class CigarScraper
         
         puts "FILLER:".blue
         puts "#{c.filler}"
-
+        
+        puts "- - - - - -".red
+        
+        puts "BINDER:".blue
+        puts "#{c.binder}"
+        
+        puts "- - - - - -".red
+        
+        puts "WRAPPER:".blue
+        puts "#{c.wrapper}"
+        
+        puts "- - - - - -".red
+        
+        puts "PRICE:".blue
+        puts "#{c.price}"
+        
+        puts "- - - - - -".red
+        
     end
     
 end
