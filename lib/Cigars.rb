@@ -26,6 +26,12 @@ class Cigars
         puts "Welcome to CigarFreaks! Here is a list of the top ten most highly valued cigars. If you would like a more in-depth look at one of these beauties, simply type in the number associated with their rank. If you'd like to quit the program, just type in 'exit'.".black
     end
     
+    def powermove(input)
+        c = CigarScraper.new 
+        h = c.hyperlink(input.to_i - 1)
+        CigarScraper.new.scrape_details(h)
+    end
+    
     def options 
         puts "- - - - - -".red
         puts "Which cigar would you like to look at? To quit, type 'exit'"
@@ -33,42 +39,43 @@ class Cigars
         input = input.downcase
         
         if input == "1"
-           CigarScraper.hyperlink CigarScraper.new.scrape_details("https://www.cigaraficionado.com/ratings/detail/source/sitesearch/note_id/19447")
+            powermove(input)
             options
             
         elsif input == "2"
-            
+            powermove(input)
             options
             
         elsif input == "3"
-            
+            powermove(input)
             options
             
         elsif input == "4"
-            
+            powermove(input)
             options
             
         elsif input == "5"
-            
+            powermove(input)
             options
             
         elsif input == "6"
-            
+            powermove(input)
             options
             
         elsif input == "7"
-            
+            powermove(input)
             options
-        elsif input == "8"
             
+        elsif input == "8"
+            powermove(input)
             options
             
         elsif input == "9"
-            
+            powermove(input)
             options
             
         elsif input == "10"
-            
+            powermove(input)
             options
             
         elsif input == "exit"

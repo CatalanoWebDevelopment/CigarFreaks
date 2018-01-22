@@ -22,11 +22,13 @@ class CigarScraper
         points
     end
     
-    def self.hyperlink
+    def hyperlink(input)
         prefix = "https://www.cigaraficionado.com"
-        suffix = @doc.search("div.cigar-teaser_wrapper a[href]").attribute("href").value
+        suffix = @doc.search("div.cigar-teaser_wrapper a[href]").map do |link|
+            link.attribute("href").value
+        end
         
-        puts "#{prefix}#{suffix}"
+        "#{prefix}#{suffix[input]}"
     end
     
     def run
