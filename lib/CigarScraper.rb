@@ -60,53 +60,8 @@ class CigarScraper
         params[:wrapper] = specs[14].strip
         params[:price] = specs[18].strip
         
-        c = Cigars.new(params)
-        
-        puts "TASTING NOTE:".blue
-        puts "#{c.tasting_note}"
-        
-        puts "- - - - - -".red
-        
-        puts "BODY:".blue
-        puts "#{c.body}"
-        
-        puts "- - - - - -".red
-        
-        puts "SIZE:".blue
-        puts "#{c.size}"
-        
-        puts "- - - - - -".red
-        
-        puts "RING GAUGE:".blue
-        puts "#{c.ring_gauge}"
-        
-        puts "- - - - - -".red
-        
-        puts "LENGTH:".blue
-        puts "#{c.length}"
-        
-        puts "- - - - - -".red
-        
-        puts "FILLER:".blue
-        puts "#{c.filler}"
-        
-        puts "- - - - - -".red
-        
-        puts "BINDER:".blue
-        puts "#{c.binder}"
-        
-        puts "- - - - - -".red
-        
-        puts "WRAPPER:".blue
-        puts "#{c.wrapper}"
-        
-        puts "- - - - - -".red
-        
-        puts "PRICE:".blue
-        puts "#{c.price}"
-        
-        puts "- - - - - -".red
-        
+        Cigars.new(params)
+       
     end
     
 end

@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 require './lib/CigarFreaksEnvironment'
 
-Cigars.new.call
+CLI.new.call
