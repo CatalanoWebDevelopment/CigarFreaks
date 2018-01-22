@@ -1,8 +1,18 @@
 # CigarFreaks
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/CigarFreaks`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to CigarFreaks! This is a dynamic gem that will keep you up-to-date on the top ten highest valued cigars. Information will include a description of the cigar's:
 
-TODO: Delete this and the text above, and describe your gem
+1) Tasting note 
+2) Ring gauge
+3) Body 
+4) Size
+5) Length
+6) Filler
+7) Binder
+8) Wrapper
+9) Price
+
+The data updates every time the program is ran. So keep in mind to check back regularly!! <3
 
 ## Installation
 
@@ -22,7 +32,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Once you have this gem loaded, simply execute:
+
+bin/cigar_freaks
+
+to get everything up and running! Once the program loads, you will be given a list of ten current cigars ordered 1 to 10. In order to retrieve information regarding the cigar in question, simply enter in the number associated with its rank. Simple! 
 
 ## Development
 
