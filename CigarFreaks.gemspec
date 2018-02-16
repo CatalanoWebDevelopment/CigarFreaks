@@ -22,7 +22,9 @@ Gem::Specification.new do |spec|
 #      "public gem pushes."
 #  end
 
-  spec.files         = ["lib/CigarFreaksEnvironment.rb", "lib/Cigars.rb", "lib/CigarScraper.rb", "lib/CLI.rb", "lib/CigarFreaks/version.rb"]
+  spec.files         = Dir['lib/**/*.rb']
+    
+    #["lib/CigarFreaksEnvironment.rb", "lib/Cigars.rb", "lib/CigarScraper.rb", "lib/CLI.rb", "lib/CigarFreaks/version.rb"]
     
     # `git ls-files -z`.split("\x0").reject do |f|
     # f.match(%r{^(test|spec|features)/})
